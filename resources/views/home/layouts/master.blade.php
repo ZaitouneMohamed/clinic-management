@@ -1,6 +1,5 @@
 @php
     $mode = app()->getLocale() == 'ar' ? 'rtl' : 'normal';
-    echo $mode;
 @endphp
 
 <!DOCTYPE html>

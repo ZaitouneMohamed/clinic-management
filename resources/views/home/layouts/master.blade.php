@@ -1,9 +1,10 @@
 @php
     $mode = app()->getLocale() == 'ar' ? 'rtl' : 'normal';
+    echo $mode;
 @endphp
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 
 <head>
     <meta charset="utf-8">
@@ -29,10 +30,9 @@
 
 <body>
 
-    <div class="page-wrapper">
+    <div class="page-wrapper @if ($mode == 'rtl') rtl @endif">
         @include('home.layouts.Header')
-
-        @yield("content")
+        @yield('content')
         <!--Main Footer-->
         <footer class="main-footer" style="background-image: url(images/background/2.jpg)">
             <div class="auto-container">
@@ -48,8 +48,7 @@
                                 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
-                                            <a href="index.html"><img src="images/footer-logo.png"
-                                                    alt="" /></a>
+                                            <a href="index.html"><img src="images/footer-logo.png" alt="" /></a>
                                         </div>
                                         <div class="text">Meditech is a library of health and medical templates with
                                             predefined web elements which helps you to build your medical templates best

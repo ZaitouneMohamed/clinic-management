@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Medi-tech - HTML Template | Home Page 01</title>
+    <title>Medi-tech</title>
     <!-- Stylesheets -->
     <link href="{{ asset('assets/mediatech/' . $mode . '/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/mediatech/' . $mode . '/css/style.css') }}" rel="stylesheet">
